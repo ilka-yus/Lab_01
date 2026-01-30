@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imperative Toogle</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        /* Подсветка текста */
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .container {
+            margin: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <h2>Imperative Approach (jQuery)</h2>
+        <button id="toggleBtn">Toggle Highlight</button>
+        <p idd="textElement">This is the paragraph that will be highlighted.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Обрабатываем клик
+            $('#toggleBtn').on('click', function() {
+                // Переключаем CSS-класс
+                $('#textElement').toggleClass('highlight');
+            });
+        });
+    </script>
+</body>
+</html>
